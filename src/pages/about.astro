@@ -1,0 +1,29 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { SITE_TITLE } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+<head>
+	<BaseHead title={`About — ${SITE_TITLE}`} description="xyztavo — builder of LunAI Entertainment" />
+</head>
+<body>
+	<Header />
+	<main class="max-w-[680px] mx-auto px-4 py-12">
+		<h1>About</h1>
+		<p>Hi, I'm <strong>xyztavo</strong>.</p>
+		<p>
+			I built LunAI Entertainment to show people — especially those in places where streaming eats a real chunk of income —
+			that there are free, open-source alternatives to every subscription service out there.
+		</p>
+		<ul class="list-none p-0 mt-6 flex flex-col gap-2">
+			<li><a href="https://github.com/xyztavo" target="_blank" rel="noopener" class="font-semibold">github.com/xyztavo</a></li>
+			<li><a href="https://ustav.lunai.monster" target="_blank" rel="noopener" class="font-semibold">ustav.lunai.monster</a></li>
+		</ul>
+	</main>
+	<Footer />
+</body>
+</html>

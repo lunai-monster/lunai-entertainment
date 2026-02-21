@@ -1,0 +1,97 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@font-face {
+	font-family: "Atkinson";
+	src: url("/fonts/atkinson-regular.woff") format("woff");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: "Atkinson";
+	src: url("/fonts/atkinson-bold.woff") format("woff");
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+@layer base {
+	*, *::before, *::after {
+		box-sizing: border-box;
+	}
+	body {
+		font-family: "Atkinson", sans-serif;
+		background: #000;
+		color: #d0d0d0;
+		overflow-x: hidden;
+		line-height: 1.7;
+	}
+	h1, h2, h3, h4, h5, h6 {
+		color: #fff;
+		line-height: 1.2;
+		margin: 0 0 0.5rem 0;
+	}
+	a {
+		color: #e0e0e0;
+	}
+	a:hover {
+		color: #fff;
+	}
+	code {
+		background: #1a1a1a;
+		color: #e0e0e0;
+		padding: 2px 5px;
+		border-radius: 2px;
+	}
+	pre > code {
+		background: transparent;
+		padding: 0;
+	}
+	blockquote {
+		border-left: 4px solid #555;
+		color: #aaa;
+		padding-left: 1.25rem;
+		margin: 0;
+	}
+	hr {
+		border-color: #333;
+	}
+}
+
+@layer components {
+	/* savings table — too complex to inline */
+	.savings-table th {
+		background: #1a1a1a;
+		color: #ccc;
+		padding: 0.75em 1em;
+		text-align: left;
+		font-size: 0.82em;
+		text-transform: uppercase;
+		letter-spacing: 0.06em;
+	}
+	.savings-table td {
+		padding: 0.7em 1em;
+		border-bottom: 1px solid #222;
+	}
+	.savings-table tr:last-child td {
+		border-bottom: none;
+	}
+	.savings-table .total-row td {
+		background: #111;
+		border-top: 2px solid #333;
+	}
+}
+
+.sr-only {
+	border: 0;
+	padding: 0;
+	margin: 0;
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	white-space: nowrap;
+}

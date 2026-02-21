@@ -1,0 +1,167 @@
+---
+import { Clapperboard, Mail, MonitorPlay, TrendingDown, TrendingUp } from '@lucide/astro';
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main class="max-w-[960px] mx-auto px-6 pb-24">
+
+			<!-- Hero -->
+			<section class="text-center py-24 px-4">
+				<div class="inline-flex items-center gap-2 text-xs font-semibold tracking-widest uppercase border border-[#333] text-[#666] px-3 py-1.5 rounded-full mb-8">
+					<TrendingUp size={12} />
+					100% Free &amp; Open Source
+				</div>
+				<h1 class="text-5xl sm:text-6xl font-bold leading-tight tracking-tight">Entertainment<br /><span class="text-[#555]">should be free.</span></h1>
+				<p class="mt-6 text-base text-[#888] max-w-lg mx-auto leading-relaxed">
+					Streaming, video, and productivity tools that cost you nothing — and respect your privacy.
+				</p>
+				<p class="mt-4 text-sm text-[#555]">Save up to <strong class="text-[#ccc]">$892 / year</strong> by switching.</p>
+			</section>
+
+			<!-- Context banner -->
+			<div class="border border-[#222] rounded-lg px-6 py-5 mb-16 text-sm text-[#666] leading-relaxed">
+				<p class="m-0">
+					In many countries, a Netflix subscription alone costs <strong class="text-[#aaa]">1–4% of the monthly minimum wage</strong>.
+					Free and open-source alternatives give everyone — regardless of income — access to great entertainment and tools.
+				</p>
+			</div>
+
+			<!-- Categories -->
+			<section class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-20">
+
+				<a href="/blog/on-demand-streaming" class="block no-underline border border-[#222] rounded-xl p-6 hover:border-[#555] transition-colors group">
+					<div class="mb-5">
+						<div class="w-9 h-9 rounded-lg border border-[#333] flex items-center justify-center mb-4">
+							<MonitorPlay size={18} class="text-[#888]" />
+						</div>
+						<h2 class="text-base font-semibold m-0 leading-snug text-[#ddd] group-hover:text-white transition-colors">On-Demand Streaming</h2>
+						<p class="text-xs text-[#555] mt-1.5 m-0 leading-relaxed">Stremio + Torrentio — replace Netflix, Disney+, Prime</p>
+					</div>
+					<p class="text-xs text-[#555] m-0">Save <strong class="text-[#aaa]">$32.47 / mo</strong></p>
+				</a>
+
+				<a href="/blog/video-platforms" class="block no-underline border border-[#222] rounded-xl p-6 hover:border-[#555] transition-colors group">
+					<div class="mb-5">
+						<div class="w-9 h-9 rounded-lg border border-[#333] flex items-center justify-center mb-4">
+							<Clapperboard size={18} class="text-[#888]" />
+						</div>
+						<h2 class="text-base font-semibold m-0 leading-snug text-[#ddd] group-hover:text-white transition-colors">Video &amp; Live Streaming</h2>
+						<p class="text-xs text-[#555] mt-1.5 m-0 leading-relaxed">Grayjay — replace YouTube Premium &amp; Twitch</p>
+					</div>
+					<p class="text-xs text-[#555] m-0">Save <strong class="text-[#aaa]">$32.96 / mo</strong></p>
+				</a>
+
+				<a href="/blog/email-productivity" class="block no-underline border border-[#222] rounded-xl p-6 hover:border-[#555] transition-colors group">
+					<div class="mb-5">
+						<div class="w-9 h-9 rounded-lg border border-[#333] flex items-center justify-center mb-4">
+							<Mail size={18} class="text-[#888]" />
+						</div>
+						<h2 class="text-base font-semibold m-0 leading-snug text-[#ddd] group-hover:text-white transition-colors">Email &amp; Productivity</h2>
+						<p class="text-xs text-[#555] mt-1.5 m-0 leading-relaxed">Proton Suite — replace GApps &amp; M365</p>
+					</div>
+					<p class="text-xs text-[#555] m-0">Save <strong class="text-[#aaa]">$8.98 / mo</strong></p>
+				</a>
+
+			</section>
+
+			<!-- Savings Summary -->
+			<section class="mb-20">
+				<h2 class="text-xl font-semibold mb-1 text-[#ddd]">Potential savings</h2>
+				<p class="text-[#555] mb-8 text-sm">Switch everything and reclaim your budget:</p>
+				<div class="overflow-x-auto rounded-xl border border-[#222]">
+					<table class="savings-table w-full text-sm">
+						<thead>
+							<tr>
+								<th>Category</th>
+								<th>Typical cost</th>
+								<th>With FOSS</th>
+								<th>Monthly savings</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>On-Demand Streaming</td>
+								<td class="text-[#666]">$32.47 / mo</td>
+								<td class="text-[#aaa]">$0</td>
+								<td class="text-[#ccc] font-semibold">$32.47</td>
+							</tr>
+							<tr>
+								<td>Video &amp; Live Streaming</td>
+								<td class="text-[#666]">$32.96 / mo</td>
+								<td class="text-[#aaa]">$0</td>
+								<td class="text-[#ccc] font-semibold">$32.96</td>
+							</tr>
+							<tr>
+								<td>Email &amp; Productivity</td>
+								<td class="text-[#666]">$8.98 / mo</td>
+								<td class="text-[#aaa]">$0</td>
+								<td class="text-[#ccc] font-semibold">$8.98</td>
+							</tr>
+							<tr class="total-row">
+								<td><strong class="text-[#ddd]">Total</strong></td>
+								<td class="text-[#666]"><strong>$74.41 / mo</strong></td>
+								<td class="text-[#aaa]"><strong>$0 / mo</strong></td>
+								<td class="text-white"><strong>$74.41 / mo</strong></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="mt-10 text-center">
+					<span class="text-5xl font-black text-white">$892</span>
+					<span class="text-xl text-[#444] ml-2">/ year back in your pocket</span>
+				</div>
+				<p class="mt-4 text-xs text-[#444] text-center max-w-xl mx-auto">
+					Prices in USD, 2025. In countries where streaming takes a larger share of income, these savings are even more significant.
+				</p>
+			</section>
+
+			<!-- Get Started -->
+			<section class="mb-8">
+				<h2 class="text-xl font-semibold mb-10 text-[#ddd]">Where do I start?</h2>
+				<div class="flex flex-col gap-8">
+					<div class="flex items-start gap-6">
+						<span class="flex-shrink-0 w-8 h-8 rounded-full border border-[#444] text-[#888] font-bold text-sm flex items-center justify-center">1</span>
+						<div class="pt-0.5">
+							<strong class="text-[#ddd] font-semibold">Install Stremio</strong>
+							<p class="m-0 mt-2 text-sm text-[#666] leading-relaxed">Available on Windows, macOS, Linux, Android, iOS, and smart TVs. Add the Torrentio addon from inside the app.</p>
+						</div>
+					</div>
+					<div class="flex items-start gap-6">
+						<span class="flex-shrink-0 w-8 h-8 rounded-full border border-[#444] text-[#888] font-bold text-sm flex items-center justify-center">2</span>
+						<div class="pt-0.5">
+							<strong class="text-[#ddd] font-semibold">Get Grayjay</strong>
+							<p class="m-0 mt-2 text-sm text-[#666] leading-relaxed">Free Android app for YouTube, Twitch, and more — all in one place, no ads, no Premium needed.</p>
+						</div>
+					</div>
+					<div class="flex items-start gap-6">
+						<span class="flex-shrink-0 w-8 h-8 rounded-full border border-[#444] text-[#888] font-bold text-sm flex items-center justify-center">3</span>
+						<div class="pt-0.5">
+							<strong class="text-[#ddd] font-semibold">Create a Proton account</strong>
+							<p class="m-0 mt-2 text-sm text-[#666] leading-relaxed">Free account gives you encrypted email, 1 GB cloud storage, VPN, and a password manager — no credit card needed.</p>
+						</div>
+					</div>
+					<div class="flex items-start gap-6">
+						<span class="flex-shrink-0 w-8 h-8 rounded-full border border-[#444] text-[#888] font-bold text-sm flex items-center justify-center">4</span>
+						<div class="pt-0.5">
+							<strong class="text-[#ddd] font-semibold">Switch at your own pace</strong>
+							<p class="m-0 mt-2 text-sm text-[#666] leading-relaxed">You don't have to do it all at once. Every service you replace is money saved and privacy gained.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		</main>
+		<Footer />
+	</body>
+</html>
+

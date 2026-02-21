@@ -1,0 +1,44 @@
+---
+import { ArrowRight } from '@lucide/astro';
+import { getCollection } from 'astro:content';
+import BaseHead from '../../components/BaseHead.astro';
+import Footer from '../../components/Footer.astro';
+import FormattedDate from '../../components/FormattedDate.astro';
+import Header from '../../components/Header.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
+
+const posts = (await getCollection('blog')).sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main class="max-w-[960px] mx-auto px-6 py-16">
+			<h1 class="text-xl font-semibold text-[#ddd] mb-10">Blog</h1>
+			<ul class="flex flex-col gap-1 list-none p-0 m-0">
+				{
+					posts.map((post) => (
+						<li>
+							<a href={`/blog/${post.id}/`} class="flex items-center justify-between py-4 border-b border-[#1a1a1a] no-underline group hover:border-[#333] transition-colors">
+								<div>
+									<p class="m-0 text-[#ccc] font-medium group-hover:text-white transition-colors">{post.data.title}</p>
+									<p class="mt-1 text-xs text-[#555] m-0">
+										<FormattedDate date={post.data.pubDate} />
+									</p>
+								</div>
+								<ArrowRight size={14} class="text-[#444] group-hover:text-[#888] transition-colors flex-shrink-0" />
+							</a>
+						</li>
+					))
+				}
+			</ul>
+		</main>
+		<Footer />
+	</body>
+</html>

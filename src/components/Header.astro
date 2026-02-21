@@ -1,0 +1,16 @@
+---
+import HeaderLink from './HeaderLink.astro';
+---
+
+<header class="bg-black border-b border-[#222] px-6">
+	<nav class="flex items-center justify-between h-[58px] max-w-[960px] mx-auto">
+		<a href="/" class="flex items-center h-full">
+			<img src="/logo.svg" alt="LunAI Entertainment" class="block h-7 w-auto" />
+		</a>
+		<div class="flex">
+			<HeaderLink href="/">Home</HeaderLink>
+			<HeaderLink href="/blog">Blog</HeaderLink>
+			<HeaderLink href="/about">About</HeaderLink>
+		</div>
+	</nav>
+</header>
