@@ -1,5 +1,5 @@
 ---
-import { Clapperboard, Mail, MonitorPlay, TrendingDown, TrendingUp } from '@lucide/astro';
+import { Clapperboard, Mail, MonitorPlay, Music2, TrendingDown, TrendingUp } from '@lucide/astro';
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
@@ -25,7 +25,7 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 				<p class="mt-6 text-base text-[#888] max-w-lg mx-auto leading-relaxed">
 					Streaming, video, and productivity tools that cost you nothing — and respect your privacy.
 				</p>
-				<p class="mt-4 text-sm text-[#555]">Save up to <strong class="text-[#ccc]">$892 / year</strong> by switching.</p>
+				<p class="mt-4 text-sm text-[#555]">Save up to <strong class="text-[#ccc]">$1,036 / year</strong> by switching.</p>
 			</section>
 
 			<!-- Context banner -->
@@ -37,7 +37,7 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 			</div>
 
 			<!-- Categories -->
-			<section class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-20">
+			<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-20">
 
 				<a href="/blog/on-demand-streaming" class="block no-underline border border-[#222] rounded-xl p-6 hover:border-[#555] transition-colors group">
 					<div class="mb-5">
@@ -59,6 +59,17 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 						<p class="text-xs text-[#555] mt-1.5 m-0 leading-relaxed">Grayjay — replace YouTube Premium &amp; Twitch</p>
 					</div>
 					<p class="text-xs text-[#555] m-0">Save <strong class="text-[#aaa]">$32.96 / mo</strong></p>
+				</a>
+
+				<a href="/blog/music-streaming" class="block no-underline border border-[#222] rounded-xl p-6 hover:border-[#555] transition-colors group">
+					<div class="mb-5">
+						<div class="w-9 h-9 rounded-lg border border-[#333] flex items-center justify-center mb-4">
+							<Music2 size={18} class="text-[#888]" />
+						</div>
+						<h2 class="text-base font-semibold m-0 leading-snug text-[#ddd] group-hover:text-white transition-colors">Music Streaming</h2>
+						<p class="text-xs text-[#555] mt-1.5 m-0 leading-relaxed">Echo — replace Spotify, Apple Music, YouTube Music</p>
+					</div>
+					<p class="text-xs text-[#555] m-0">Save <strong class="text-[#aaa]">$11.99 / mo</strong></p>
 				</a>
 
 				<a href="/blog/email-productivity" class="block no-underline border border-[#222] rounded-xl p-6 hover:border-[#555] transition-colors group">
@@ -117,7 +128,7 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 					</table>
 				</div>
 				<div class="mt-10 text-center">
-					<span class="text-5xl font-black text-white">$892</span>
+					<span class="text-5xl font-black text-white">$1,036</span>
 					<span class="text-xl text-[#444] ml-2">/ year back in your pocket</span>
 				</div>
 				<p class="mt-4 text-xs text-[#444] text-center max-w-xl mx-auto">
@@ -146,12 +157,19 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 					<div class="flex items-start gap-6">
 						<span class="flex-shrink-0 w-8 h-8 rounded-full border border-[#444] text-[#888] font-bold text-sm flex items-center justify-center">3</span>
 						<div class="pt-0.5">
+							<strong class="text-[#ddd] font-semibold">Get Echo</strong>
+							<p class="m-0 mt-2 text-sm text-[#666] leading-relaxed">Free Android music player with an extension system — stream from any source, no Spotify account needed.</p>
+						</div>
+					</div>
+					<div class="flex items-start gap-6">
+						<span class="flex-shrink-0 w-8 h-8 rounded-full border border-[#444] text-[#888] font-bold text-sm flex items-center justify-center">4</span>
+						<div class="pt-0.5">
 							<strong class="text-[#ddd] font-semibold">Create a Proton account</strong>
 							<p class="m-0 mt-2 text-sm text-[#666] leading-relaxed">Free account gives you encrypted email, 1 GB cloud storage, VPN, and a password manager — no credit card needed.</p>
 						</div>
 					</div>
 					<div class="flex items-start gap-6">
-						<span class="flex-shrink-0 w-8 h-8 rounded-full border border-[#444] text-[#888] font-bold text-sm flex items-center justify-center">4</span>
+						<span class="flex-shrink-0 w-8 h-8 rounded-full border border-[#444] text-[#888] font-bold text-sm flex items-center justify-center">5</span>
 						<div class="pt-0.5">
 							<strong class="text-[#ddd] font-semibold">Switch at your own pace</strong>
 							<p class="m-0 mt-2 text-sm text-[#666] leading-relaxed">You don't have to do it all at once. Every service you replace is money saved and privacy gained.</p>
